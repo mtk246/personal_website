@@ -11,7 +11,7 @@ const Table = ({ data }) => (
           format={pair.format}
           key={pair.label}
           label={pair.label}
-          link={pair.link}
+          // link={pair.link}
           value={pair.value}
         />
       ))}

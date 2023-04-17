@@ -4,18 +4,18 @@ const routes = [
     label: 'Min Thu Kyaw',
     path: '/',
   },
-  {
-    label: 'About',
-    path: '/about',
-  },
+  // {
+  //   label: 'About',
+  //   path: '/about',
+  // },
   {
     label: 'Resume',
     path: '/resume',
   },
-  {
-    label: 'Projects',
-    path: '/projects',
-  },
+  // {
+  //   label: 'Projects',
+  //   path: '/projects',
+  // },
   {
     label: 'Stats',
     path: '/stats',
