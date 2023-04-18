@@ -8,7 +8,7 @@ const degrees = [
   },
   {
     school: 'KMD Institute',
-    degree: 'BSc (Hons) Computing',
+    degree: 'BSc (Hons) Computing by NCC of United Kingdom',
     link: 'http://www.kmd.edu.mm/',
     year: '2022 to present',
     remark: '',

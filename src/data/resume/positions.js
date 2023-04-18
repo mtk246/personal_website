@@ -1,5 +1,18 @@
 const positions = [
   {
+    company: 'Khit Kabar Software House',
+    position: 'Software and DevOps Engineer',
+    link: 'https://software.khitkabar.com',
+    daterange: 'January 2023 - Present',
+    points: [
+      'Full-stack development of web-based applications using NodeJs, PostgreSQL, NextJS, TypeScript, GO, Docker, VPS, Nginx (Inventory Management System)',
+      'Develop desktop and mobile application using Flutter (Job Seeker App)',
+      'Managing several containers for each micro-services (GO, NodeJs)',
+      'Deploy and host several containers using GitLab CI to VPS and Job Seeker App deploy with AWS CodeDeploy and Jenkins and Lambda',
+      'NextJS as Front-end and GO, NodeJs as Back-end, Full-stack as Flutter',
+    ],
+  },
+  {
     company: 'ABC Hosting, Ltd.',
     position: 'Software Developer',
     link: 'https://mintme.com',
