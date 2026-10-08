@@ -18,10 +18,20 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Seeking a challenging position as a Software Developer
-        where I can utilize my logical and analytical skills, knowledge, and experiences.
-        Focus to work in a challenging environment that would offer me various opportunities
-        of working on the leading edge technology, handling responsibilities, and career growth.
+        Software Engineer with 6+ years of professional experience developing,
+        deploying, and maintaining full-stack web applications, backend
+        services, containerized environments, and production infrastructure.
+        Experienced with JavaScript, TypeScript, Go, PHP, Ruby, Node.js,
+        Laravel, React, Vue, Next.js, PostgreSQL, MySQL, Docker, AWS, Linux,
+        Nginx, and CI/CD. Hands-on experience managing both cloud/VPS
+        infrastructure and physical rack-mounted servers in on-premises,
+        data-center-style environments. Experienced in Linux and Windows server
+        administration, containerization, microservices, REST APIs, database
+        systems, automated deployments, production troubleshooting, and
+        infrastructure maintenance. Strong background across the complete
+        software lifecycle, including application development, system analysis,
+        database design, deployment automation, server administration,
+        troubleshooting, and production support.
       </p>
       <ul className="actions">
         <li>

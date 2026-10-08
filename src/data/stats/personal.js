@@ -34,7 +34,7 @@ const data = [
   {
     key: 'location',
     label: 'Current city',
-    value: 'Myanmar, MM',
+    value: 'New York, US',
   },
 ];
 
