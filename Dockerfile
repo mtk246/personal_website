@@ -1,43 +1,25 @@
-# ---- Dependencies ----
-FROM node:22-alpine AS deps
+# syntax=docker/dockerfile:1
+
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN --mount=type=cache,target=/root/.npm npm ci
 
-
-# ---- Build ----
-FROM node:22-alpine AS builder
-
-WORKDIR /app
-
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 RUN npm run build
 
 
-# ---- Production ----
-FROM node:22-alpine AS runner
+FROM nginx:alpine AS runner
 
-WORKDIR /app
+RUN rm -rf /usr/share/nginx/html/*
 
-ENV NODE_ENV=production
-ENV PORT=3000
+COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Create non-root user
-RUN addgroup --system --gid 1001 nodejs \
-    && adduser --system --uid 1001 nextjs
+EXPOSE 80
 
-# Copy only production output
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-
-EXPOSE 3000
-
-CMD ["node", "server.js"]
+CMD ["nginx", "-g", "daemon off;"]
