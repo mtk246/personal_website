@@ -10,7 +10,7 @@ const degrees = [
     school: 'Bourough of Manhattan Community College',
     degree: 'Associate Degree in Computer Science',
     link: 'https://www.bmcc.cuny.edu/',
-    year: '2022 to present',
+    year: '2022 to 2026',
     remark: '',
   },
   {
