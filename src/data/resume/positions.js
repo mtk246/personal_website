@@ -6,7 +6,7 @@ const positions = [
     daterange: 'May 2023 - Present',
     points: [
       'Develop and maintain full-stack web applications using Node.js, Vue.js, Laravel, PostgreSQL, Docker, Nginx, and Linux/VPS infrastructure for e-commerce and medical-claim platforms',
-      '•Design and maintain containerized microservice architectures, separating frontend, backend, and database services',
+      'Design and maintain containerized microservice architectures, separating frontend, backend, and database services',
       'Develop and maintain RESTful APIs and backend services using Node.js and Laravel',
       'Build responsive frontend applications using Vue.js and integrate them with backend services and APIs',
       'Manage multiple Docker containers and application services across development and production environments',
