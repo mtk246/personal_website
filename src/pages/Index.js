@@ -4,7 +4,7 @@ import Main from '../layouts/Main';
 
 const Index = () => (
   <Main
-    description={"Min Thu Kyaw's personal website."}
+    description="Min Thu Kyaw's personal website."
   />
 );
 
