@@ -1,0 +1,40 @@
+
+name: Deploy Personal Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, Linux, X64]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t portfolio:latest .
+
+      - name: Replace running container
+        run: |
+          docker rm -f portfolio || true
+          docker run -d \
+            --name portfolio \
+            --restart unless-stopped \
+            -p 3000:80 \
+            portfolio:latest
+
+      - name: Verify website
+        run: |
+          sleep 3
+          curl --fail http://localhost:3000/
